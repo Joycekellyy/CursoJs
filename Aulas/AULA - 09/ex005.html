@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 EXERCÍCIO/Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(241, 48, 87);
+            color: white;
+            font: normal 10pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com <strong>DOM</strong>...</h1>
+    <p>Aqui vai o resultado...</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript<p>
+    <div id = 'msg'>Clique em mim: </div>
+    <script>
+        //De acordo com a funcionalidade, deve-se mudar o DIV.
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('P')[1]
+        /*
+        window.document.write(`Está escrito assim: ${p1.innerText}`)
+        corpo.style.background = 'black'
+        p1.style.color = 'green'
+        */
+        //PELO ID 
+        /*
+        window.alert(p1.innerText)
+        var d = window.document.getElementById('msg')
+        d.style.background = 'blue'
+        d.innerText = 'Estou aguardando...'
+        window.document.getElementById('msg').innerText = 'Olá'
+        */
+        //PELO NOME
+        /*
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Olá'
+        */
+        //PELO SELETOR
+              
+        var d = window.document.querySelector('div#msg')
+       
+        d.style.background = 'rgb(226, 83, 112)'
+    </script>
+</body>
+</html>
