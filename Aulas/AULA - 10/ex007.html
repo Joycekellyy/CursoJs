@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 EXERCÍCIO</title>
+    <style>
+        body{
+            background-color:indigo;
+            color: white;
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18 pt Arial;
+            width: 80px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+        div#gostado{
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txt1" id="txt1"> +
+    <input type="number" name="txt2" id="txt2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id = "res">Resposta...</div>
+    <div id = "gostado"> </div>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txt1')
+            var tn2 = window.document.querySelector('input#txt2')
+            var res = window.document.getElementById('res')
+            var gos= window.document.getElementById('gostado')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var soma = n1 + n2
+            res.innerHTML = `A soma entre os números ${n1} e ${n2} é <strong>${soma}</strong>.`
+            gos.innerText = `-=-=-=- Espero que tenha gostado! :) -=-=-=-`           
+        }
+    </script>
+</body>
+</html>
