@@ -1,1 +1,0 @@
-window.alert('Modelo do exercício da aula 12')
