@@ -44,7 +44,7 @@ function verificar() {
             }
         }
         resposta.style.textAlign = 'center'
-        resposta.innerHTML = `Detectamos um(a) ${gênero} com ${idade} anos de idade.`
+        resposta.innerHTML = `<p>Detectamos um(a) ${gênero} com ${idade} anos de idade.</p>`
         resposta.appendChild(img)
     }
 }
