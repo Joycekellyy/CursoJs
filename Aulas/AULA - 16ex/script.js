@@ -1,23 +1,31 @@
-var lista = []
-function verificar() {
-    var tab = document.getElementById('seltab')
-    var txtnum = document.getElementById('numtxt')
-    var número = Number(txtnum.value)
-    
+let lista = []
 
-    if (número < 1) {
-        window.alert('IMPOSSÍVEL CALCULAR!')
+var tab = document.getElementById('seltab')
+var txtnum = document.getElementById('numtxt')
+var número = Number(txtnum.value)
+
+function IsNumber(n) {
+    if(Number(n.value) >= 1 && Number(n.value) <= 100) {
+        return true
     } else {
-        lista.push(número);
-        if (número in lista) {
-            window.alert('Este número já está na tabela')
-        } else {
-            tab.innerHTML = ''
-            let item = document.createElement('option')
-            item.text = `Número ${número} adicionado!`
-            item.value = `tab`
-            tab.appendChild(item)
-        }
+        return false
     }
 }
 
+function InList(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+    
+}
+
+function verificar() {
+    if(IsNumber(txtnum.value) && !InList(txtnum.value, lista)) {
+       window.alert("Tudo ok")
+       lista.push(Number(txtnum.value))
+    } else {
+        window.alert('Dados inválidos ou número já adicionado!')
+    }
+}
